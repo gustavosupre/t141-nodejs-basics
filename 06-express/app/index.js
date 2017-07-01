@@ -8,7 +8,11 @@ app.use(bodyParser.json())
 
 //publish HTML5 app
 app.get('/', (request, response) => {
-    response.send("Hi")
+    let subscriper = {
+        "name": "Gustavo Araujo",
+        "email": "gustavocaraujo@gmail.com"
+    }
+    response.json(subscriper)
 })
 
 app.get('/about', (request, response) => {
