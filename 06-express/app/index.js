@@ -5,19 +5,11 @@ const bodyParser = require('body-parser')
 //setup
 const app = express()
 app.use(bodyParser.json())
-//app.use(express.static('public'))
+app.use(express.static('public'))
 
-//publish HTML5 app
-app.get('/', (request, response) => {
-    let subscriper = [{
-        "name": "Gustavo Araujo",
-        "email": "gustavocaraujo@gmail.com"
-    },{
-        "name": "Edy Segura",
-        "email": "Edy@inatel.br"
-    }]
-    response.json(subscriper)
-})
+//Subscriber API
+app.use('/api/subscribers', require('./subscriberApi'))
+
 
 app.get('/about', (request, response) => {
     response.send('This is a express application')
