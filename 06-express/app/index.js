@@ -10,6 +10,9 @@ app.use(express.static('public'))
 //Subscriber API
 app.use('/api/subscribers', require('./subscriberApi'))
 
+//separar as rotas por arquivos APIs - exemplo abaixo
+//app.use('/api/products', require('./productsApi'))
+
 
 app.get('/about', (request, response) => {
     response.send('This is a express application')
