@@ -19,3 +19,6 @@ server.listen(PORT, (error) => {
 //note
 //mais no repositorio nodejs-http-server
 //(https://github.com/gustavosupre/nodejs-http-server)
+
+//instalar aplicação now para rodar a aplicação pela internet
+//$ npm instal -g now
